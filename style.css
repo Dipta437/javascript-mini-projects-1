@@ -1,0 +1,9 @@
+header{
+    box-sizing: border-box;
+    text-align: center;
+}
+
+label{
+    display: block;
+    margin: 1rem;
+}
