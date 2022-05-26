@@ -21,17 +21,17 @@ function submitHandler(){
 
 // profit logic step
 
-function calculateProfitAndLoss(initial, quantity, current) {
+function calculateProfitAndLoss( initial, quantity, current) {
     if(current > initial){
         var profit = (current - initial)*quantity;
         var profitPercentage = ((profit / initial) * 100).toFixed(2);
 
         outputMessage(`Hey the Profit is ${profit} and the Profit Percentage is ${profitPercentage}%`);
-    }else if (current < initial) {
+    }else if (initial > current) {
         var loss = (initial - current)*quantity;
         var lossPercentage = ((loss / initial) * 100).toFixed(2);
 
-        outputMessage(`Hey the Loss is ${loss} and the Loss Percentage is ${lossPercentage}%`);
+        outputMessage(`OOps your Loss is ${loss} and the Loss Percentage is ${lossPercentage}%`);
     }else{
         outputMessage(`You didn't make any Profit, There's No Pain and No Gain`);
     }
